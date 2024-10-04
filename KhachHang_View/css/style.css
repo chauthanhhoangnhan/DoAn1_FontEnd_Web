@@ -171,9 +171,6 @@ p {
 .cusor {
     cursor: pointer;
 }
-.cusor :hover {
-    background: yellow !important;
-}
 /* Lich */
 .flatpickr-months .flatpickr-month {
     background: #0F172B !important;
@@ -294,7 +291,7 @@ input:focus-visible {
     margin-right: 20px !important;
 }
 .Datphong-hover {
-    transition: margin-left 0.1s, margin-right 0.1s;
+    transition: margin-left 0.3s, margin-right 0.3s;
 }
 
 .item {
