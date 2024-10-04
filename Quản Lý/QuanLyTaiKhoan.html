@@ -1,0 +1,185 @@
+<div class="main" class="" id="content">
+    <nav class="navbar navbar-expand px-4 py-3">
+        <div class="navbar-collapse collapse">
+            <ul class="navbar-nav justify-content-between" style="width: 1380px;">
+                <li>
+                    <h2 style="font-weight: bolder;">Thông tin tài khoản</h2>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" data-bs-toggle="dropdown" class="nav-icon pe-md-0">
+                        <img src="images/account.png" class="avatar img-fluid" alt="">
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-end rounded">
+
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <main class="content px-3 py-3">
+        <div class="container-fluid">
+            <div>
+
+                <div class="row justify-content-between mx-1 mb-4">
+                    <div class="input-group d-flex align-items-center border border-dark rounded"
+                        style="width: 300px;padding: 0;">
+                        <i class="fa-solid fa-magnifying-glass fa-1x ms-2 "></i>
+                        <input type="text" class="form-control input-border" placeholder="Thông tin tài khoản"
+                            aria-label="Username" aria-describedby="basic-addon1" style="border: 0;">
+                    </div>
+                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#them"
+                        data-bs-dismiss="modal" style="width: 135px; font-size: small;">Thêm tài khoản</button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="them" tabindex="-1" aria-labelledby="them" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content" style="border-radius: 20px;">
+                                <div class="modal-header d-flex justify-content-center">
+                                    <div>
+                                        <h5 style="font-weight: bolder;">Thêm tài khoản</h5>
+                                    </div>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body pb-0">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <label for="" class="ms-1 mb-1 label-modal">Tài khoản</label>
+                                                <input type="text" class="form-control" placeholder=""
+                                                    aria-label="Username" aria-describedby="addon-wrapping">
+                                            </div>
+                                            <!-- <div class="col-6">
+                                                <label for="" class="ms-1 mb-1 label-modal">Họ và Tên</label>
+                                                <input type="text" class="form-control" placeholder=""
+                                                    aria-label="Username" aria-describedby="addon-wrapping">
+                                            </div> -->
+                                            <!-- <div class="col-6">
+                                                <label class="mb-1 ms-1 label-modal">Chức vụ</label>
+                                                <select class="form-select" aria-label="Default select example">
+                                                    <option selected>Quản lý</option>
+                                                    <option value="1">Lễ tân</option>
+                                                </select>
+                                            </div> -->
+                                            <div class="col-6">
+                                                <label for="" class="ms-1 mb-1 label-modal">Mật khẩu</label>
+                                                <input type="text" class="form-control" placeholder=""
+                                                    aria-label="Username" aria-describedby="addon-wrapping">
+                                            </div>
+                                        </div>
+                                        <div class="row mt-2">
+                                            <div class="col-6">
+                                                <label for="" class="ms-1 mb-1 label-modal">Họ và Tên:</label>
+                                                <div>
+                                                    <h6 class="ms-1">Châu Thanh Hoàng Nhân</h6>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <label for="" class="ms-1 mb-1 label-modal">Chức Vụ: </label>
+                                                <div>
+                                                    <h6 class="ms-1">Quản Lý</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- footer -->
+                                <div class="container">
+                                    <div class="row" style="justify-content: flex-end;">
+                                        <div class="col-3 m-2 d-flex justify-content-end">
+                                            <button type="button" class="btn btn-success" style="font-size: small;">Thêm tài khoản</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mt-2">
+                    <div class="col-12">
+                        <table class="table">
+                            <thead style="background: #0e2238;">
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Họ và tên</th>
+                                    <th scope="col">Chức vụ</th>
+                                    <th scope="col">Tài khoản</th>
+                                    <th scope="col">Mật khẩu</th>
+                                    <th scope="col"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr></tr>
+                                    <th scope="row">1</th>
+                                    <td>Huỳnh Quốc Bảo</td>
+                                    <td>Quản lý</td>
+                                    <td>admin</td>
+                                    <td>admin1234</td>
+                                    <td class="d-flex  justify-content-end">
+                                        <button type="button" class="btn btn-warning me-2" data-bs-toggle="modal"
+                                            data-bs-target="#sua" data-bs-dismiss="modal"
+                                            style="font-size: small;">Sửa</button>
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="sua" tabindex="-1" aria-labelledby="sua" aria-hidden="true">
+                                            <div class="modal-dialog modal-lg">
+                                                <div class="modal-content" style="border-radius: 20px;">
+                                                    <div class="modal-header d-flex justify-content-center">
+                                                        <div>
+                                                            <h5 style="font-weight: bolder;">Sửa thông tin nhân viên</h5>
+                                                        </div>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                            aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="container">
+                                                            <div class="row">
+                                                                <div class="col-6">
+                                                                    <label for="" class="ms-1 mb-1 label-modal">Họ và Tên</label>
+                                                                    <input type="text" class="form-control" placeholder=""
+                                                                        aria-label="Username" aria-describedby="addon-wrapping">
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <label class="mb-1 ms-1 label-modal">Chức vụ</label>
+                                                                    <select class="form-select" aria-label="Default select example">
+                                                                        <option selected>Quản lý</option>
+                                                                        <option value="1">Lễ tân</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row mt-3">
+                                                                <div class="col-6">
+                                                                    <label for="" class="ms-1 mb-1 label-modal">Tài khoản</label>
+                                                                    <input type="text" class="form-control" placeholder=""
+                                                                        aria-label="Username" aria-describedby="addon-wrapping">
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <label for="" class="ms-1 mb-1 label-modal">Mật khẩu</label>
+                                                                    <input type="text" class="form-control" placeholder=""
+                                                                        aria-label="Username" aria-describedby="addon-wrapping">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- footer -->
+                                                    <div class="container my-2">
+                                                        <div class="row" style="justify-content: flex-end;">
+                                                            <div class="col-3 m-2 d-flex justify-content-end">
+                                                                <button type="button" class="btn btn-success" style="font-size: small;">Đồng ý</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button type="button" class="btn btn-danger"
+                                            style="font-size: small;">Xóa</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>

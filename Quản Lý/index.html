@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý</title>
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <!-- FontAwsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Bootstrap -->
+    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <!-- Css -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div id="sidebar" class="expand">
+            <div class="d-flex">
+                <button class="toggle-btn" type="button">
+                    <i class="lni lni-grid-alt"></i>
+                </button>
+                <div class="sidebar-logo">
+                    <a href="#">3TL HOTEL</a>
+                </div>
+            </div>
+            <ul class="sidebar-nav">
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link" onclick="loadContent('QuanLyNhanVien.html')">
+                        <i class="lni lni-user"></i>
+                        <span>Quản lý nhân viên</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse"
+                        data-bs-target="#auth" aria-expanded="false" aria-controls="auth">
+                        <i class="lni lni-agenda"></i>
+                        <span>Quản lý phòng</span>
+                    </a>
+                    <ul id="auth" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link" onclick="loadContent('HangPhong.html')">Hạng phòng</a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link" onclick="loadContent('Phong.html')">phòng</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link " onclick="loadContent('QuanLyThuChi.html')">
+                        <i class="lni lni-protection"></i>
+                        <span>Quản lý thu chi</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link" onclick="loadContent('ThongKeDoanhThu.html')">
+                        <i class="lni lni-layout"></i>
+                        <span>Thống kê doanh thu</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link" onclick="loadContent('QuanLyKhachHang.html')">
+                        <i class="lni lni-popup"></i>
+                        <span>Quản lý khách hàng</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link" onclick="loadContent('QuanLyTaiKhoan.html')">
+                        <i class="lni lni-cog"></i>
+                        <span>Quản lý tài khoản</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="sidebar-footer">
+                <a href="#" class="sidebar-link">
+                    <i class="lni lni-exit"></i>
+                    <span>Đổi mật khẩu</span>
+                </a>
+            </div>
+        </div>
+        <div class="main" class="" id="content">
+            <div class="main" class="" id="content">
+                <nav class="navbar navbar-expand px-4 py-3">
+                    <div class="navbar-collapse collapse">
+                        <ul class="navbar-nav justify-content-between" style="width: 1380px;">
+                            <li>
+                                <h2 style="font-weight: bolder;">Thông tin nhân viên</h2>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" data-bs-toggle="dropdown" class="nav-icon pe-md-0">
+                                    <img src="images/account.png" class="avatar img-fluid" alt="">
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-end rounded">
+            
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <main class="content px-3 py-3">
+                    <div class="container-fluid">
+                        <div>
+            
+                            <div class="row justify-content-between mx-1 mb-4">
+                                <div class="input-group d-flex align-items-center border border-dark rounded"
+                                    style="width: 300px;padding: 0;">
+                                    <i class="fa-solid fa-magnifying-glass fa-1x ms-2 "></i>
+                                    <input type="text" class="form-control input-border" placeholder="Thông tin nhân viên"
+                                        aria-label="Username" aria-describedby="basic-addon1" style="border: 0;">
+                                </div>
+                                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#them"
+                                    data-bs-dismiss="modal" style="width: 135px; font-size: small;">Thêm nhân
+                                    viên</button>
+                                <!-- Modal -->
+                                <div class="modal fade" id="them" tabindex="-1" aria-labelledby="them" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg">
+                                        <div class="modal-content" style="border-radius: 20px;">
+                                            <div class="modal-header d-flex justify-content-center">
+                                                <div>
+                                                    <h5 style="font-weight: bolder;">Thêm nhân viên</h5>
+                                                </div>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="container">
+                                                    <div class="row">
+                                                        <div class="col-6">
+                                                            <label for="" class="ms-1 mb-1 label-modal">Họ và Tên</label>
+                                                            <input type="text" class="form-control" placeholder=""
+                                                                aria-label="Username" aria-describedby="addon-wrapping">
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <label class="mb-1 ms-1 label-modal">Giới tính</label>
+                                                            <select class="form-select" aria-label="Default select example">
+                                                                <option selected>Nam</option>
+                                                                <option value="1">Nữ</option>
+                                                                <option value="2">Khác</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mt-3">
+                                                        <div class="col-6">
+                                                            <label for="" class="ms-1 mb-1 label-modal">Căn cước công dân</label>
+                                                            <input type="text" class="form-control" placeholder=""
+                                                                aria-label="Username" aria-describedby="addon-wrapping">
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <label for="" class="ms-1 mb-1 label-modal">Số điện thoại</label>
+                                                            <input type="text" class="form-control" placeholder=""
+                                                                aria-label="Username" aria-describedby="addon-wrapping">
+                                                        </div>
+                                                    </div>
+            
+                                                    <div class="row mt-3">
+                                                        <div class="col-6">
+                                                            <label class="mb-1 ms-1 label-modal">Chức vụ </label>
+                                                            <select class="form-select" aria-label="Default select example">
+                                                                <option selected>Quản lý </option>
+                                                                <option value="1">Bảo vệ</option>
+                                                                <option value="2">Lễ tân</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <label for="" class="ms-1 mb-1 label-modal">Địa chỉ</label>
+                                                            <input type="text" class="form-control" placeholder=""
+                                                                aria-label="Username" aria-describedby="addon-wrapping">
+                                                        </div>
+                                                    </div>
+            
+                                                    <div class="row mt-3">
+                                                        <div class="col-6">
+                                                            <label class="mb-1 ms-1 label-modal">Ảnh </label>
+                                                            <input type="file" id="imageInput" accept="image/*">
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <img id="imagePreview" src="" alt="Xem trước ảnh" style="max-width: 55px; display: none;">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- footer -->
+                                            <div class="container my-2">
+                                                <div class="row" style="justify-content: flex-end;">
+                                                    <div class="col-3 m-2 d-flex justify-content-end">
+                                                        <button type="button" class="btn btn-success" style="font-size: small;">Thêm
+                                                            nhân viên</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+            
+                            <div class="row mt-2">
+                                <div class="col-12">
+                                    <table class="table">
+                                        <thead style="background: #0e2238;">
+                                            <tr>
+                                                <th scope="col">STT</th>
+                                                <th scope="col">Họ và tên</th>
+                                                <th scope="col">Giới tính</th>
+                                                <th scope="col">Số điện thoại</th>
+                                                <th scope="col">Chức vụ</th>
+                                                <th scope="col">Địa chỉ</th>
+                                                <th scope="col"></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr></tr>
+                                                <th scope="row">1</th>
+                                                <td>Huỳnh Quốc Bảo</td>
+                                                <td>Nam</td>
+                                                <td>090013332</td>
+                                                <td>Quản lý</td>
+                                                <td>Cần Thơ</td>
+                                                <td class="d-flex  justify-content-end">
+                                                    <a class="cusor me-2 mt-1" data-bs-toggle="modal" data-bs-target="#chitiet"
+                                                        style="color: darkblue; font-style: italic; text-decoration: underline;">Chi tiết</a>
+                                                    <!-- Modal -->
+                                                    <div class="modal fade" id="chitiet" tabindex="-1" aria-labelledby="chitiet" aria-hidden="true">
+                                                        <div class="modal-dialog modal-lg">
+                                                            <div class="modal-content" style="border-radius: 20px;">
+                                                                <div class="modal-header d-flex justify-content-center">
+                                                                    <div>
+                                                                        <h5 style="font-weight: bolder;">Thông tin nhân viên</h5>
+                                                                    </div>
+                                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                                        aria-label="Close"></button>
+                                                                </div>
+                                                                <div class="modal-body">
+                                                                    <div class="container">
+                                                                        <div class="row">
+                                                                            <div class="col-2">
+                                                                                <img src="images/team-4.jpg" alt="" style="width: 130px;">
+                                                                                <h5 class="text-center mt-2 ms-2" style="font-weight: 600;">Quản Lý</h5>
+                                                                            </div>
+                                                                            <div class="col-10">
+                                                                                <div class="container ms-3">
+                                                                                    <div class="row">
+                                                                                        <h4 style="font-weight: 600;">Huỳnh Quốc Bảo</h4>
+                                                                                    </div>
+                                                                                    <div class="row mt-2">
+                                                                                        <div class="col-8">
+                                                                                            <h6> <span style="font-weight: 600;">Căn cước công dân:</span> 09977364764</h6>
+                                                                                        </div>
+                                                                                        <div class="col-4">
+                                                                                            <h6><span style="font-weight: 600;">Giới Tính:</span> Nam</h6>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="row mt-2">
+                                                                                        <div class="col-8">
+                                                                                            <h6><span style="font-weight: 600;">Số điện thoại:</span> 09774764</h6>
+                                                                                        </div>
+                                                                                        <div class="col-4">
+                                                                                            <h6><span style="font-weight: 600;">Địa Chỉ:</span>  Cần Thơ</h6>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="row mt-2">
+                                                                                        <h6><span style="font-weight: 600;">Lương cơ bản:</span> 15.000.000 VND</h6>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <button type="button" class="btn btn-warning me-2" data-bs-toggle="modal"
+                                                        data-bs-target="#sua" data-bs-dismiss="modal"
+                                                        style="font-size: small;">Sửa</button>
+                                                    <!-- Modal -->
+                                                    <div class="modal fade" id="sua" tabindex="-1" aria-labelledby="sua" aria-hidden="true">
+                                                        <div class="modal-dialog modal-lg">
+                                                            <div class="modal-content" style="border-radius: 20px;">
+                                                                <div class="modal-header d-flex justify-content-center">
+                                                                    <div>
+                                                                        <h5 style="font-weight: bolder;">Sửa thông tin nhân viên</h5>
+                                                                    </div>
+                                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                                        aria-label="Close"></button>
+                                                                </div>
+                                                                <div class="modal-body">
+                                                                    <div class="container">
+                                                                        <div class="row">
+                                                                            <div class="col-6">
+                                                                                <label for="" class="ms-1 mb-1 label-modal">Họ và Tên</label>
+                                                                                <input type="text" class="form-control" placeholder="Huỳnh Quốc Bảo"
+                                                                                    aria-label="Username" aria-describedby="addon-wrapping" style="font-weight: 700;">
+                                                                            </div>
+                                                                            <div class="col-6">
+                                                                                <label class="mb-1 ms-1 label-modal">Giới tính</label>
+                                                                                <select class="form-select" aria-label="Default select example" style="font-weight: 700;">
+                                                                                    <option selected>Nam</option>
+                                                                                    <option value="1">Nữ</option>
+                                                                                    <option value="2">Khác</option>
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="row mt-3">
+                                                                            <div class="col-6">
+                                                                                <label for="" class="ms-1 mb-1 label-modal">Căn cước công dân</label>
+                                                                                <input type="text" class="form-control" placeholder="099292929"
+                                                                                    aria-label="Username" aria-describedby="addon-wrapping" style="font-weight: 700;">
+                                                                            </div>
+                                                                            <div class="col-6">
+                                                                                <label for="" class="ms-1 mb-1 label-modal">Số điện thoại</label>
+                                                                                <input type="text" class="form-control" placeholder="077362782"
+                                                                                    aria-label="Username" aria-describedby="addon-wrapping" style="font-weight: 700;">
+                                                                            </div>
+                                                                        </div>
+                                
+                                                                        <div class="row mt-3">
+                                                                            <div class="col-6">
+                                                                                <label class="mb-1 ms-1 label-modal">Chức vụ </label>
+                                                                                <select class="form-select" aria-label="Default select example" style="font-weight: 700;">
+                                                                                    <option selected>Quản lý </option>
+                                                                                    <option value="1">Bảo vệ</option>
+                                                                                    <option value="2">Lễ tân</option>
+                                                                                </select>
+                                                                            </div>
+                                                                            <div class="col-6">
+                                                                                <label for="" class="ms-1 mb-1 label-modal">Địa chỉ</label>
+                                                                                <input type="text" class="form-control" placeholder="Cần Thơ"
+                                                                                    aria-label="Username" aria-describedby="addon-wrapping" style="font-weight: 700;">
+                                                                            </div>
+                                                                        </div>
+                                
+                                                                        <div class="row mt-3">
+                                                                            <div class="col-6">
+                                                                                <label class="mb-1 ms-1 label-modal">Ảnh </label>
+                                                                                <input type="file" id="imageInput" accept="image/*">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <!-- footer -->
+                                                                <div class="container my-2">
+                                                                    <div class="row" style="justify-content: flex-end;">
+                                                                        <div class="col-3 m-2 d-flex justify-content-end">
+                                                                            <button type="button" class="btn btn-success" style="font-size: small;">Đồng ý</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <button type="button" class="btn btn-danger"
+                                                        style="font-size: small;">Xóa</button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
