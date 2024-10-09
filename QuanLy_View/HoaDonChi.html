@@ -1,0 +1,116 @@
+<div class="main" class="" id="content">
+    <nav class="navbar navbar-expand px-4 py-3">
+        <div class="navbar-collapse collapse">
+            <ul class="navbar-nav justify-content-between" style="width: 1380px;">
+                <li>
+                    <h2 style="font-weight: bolder;">Hóa đơn Chi</h2>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" data-bs-toggle="dropdown" class="nav-icon pe-md-0">
+                        <img src="images/account.png" class="avatar img-fluid" alt="">
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-end rounded">
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <main class="content px-3 py-3">
+        <div class="container-fluid">
+            <div>
+
+                <div class="row justify-content-between mx-1 mb-4">
+                    <div class="input-group d-flex align-items-center border border-dark rounded"
+                        style="width: 300px;padding: 0;">
+                        <i class="fa-solid fa-magnifying-glass fa-1x ms-2 "></i>
+                        <input type="text" class="form-control input-border" placeholder="Thông tin hóa đơn"
+                            aria-label="Username" aria-describedby="basic-addon1" style="border: 0;">
+                    </div>
+                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#them"
+                        data-bs-dismiss="modal" style="width: 130px; font-size: small;">Lập hóa đơn</button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="them" tabindex="-1" aria-labelledby="them" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content" style="border-radius: 20px;">
+                                <div class="modal-header d-flex justify-content-center">
+                                    <div>
+                                        <h5 style="font-weight: bolder;">Lập hóa đơn</h5>
+                                    </div>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <label for="" class="ms-1 mb-1 label-modal">Tên mặt hàng</label>
+                                                <input type="text" class="form-control" placeholder=""
+                                                    aria-label="Username" aria-describedby="addon-wrapping">
+                                            </div>
+                                            <div class="col-6">
+                                                <label for="" class="ms-1 mb-1 label-modal">Số lượng</label>
+                                                <input type="number" class="form-control" placeholder=""
+                                                    aria-label="Username" aria-describedby="addon-wrapping">
+                                            </div>
+                                        </div>
+                                        <div class="row mt-3">
+                                            <div class="col-6">
+                                                <label for="" class="ms-1 mb-1 label-modal">Giá</label>
+                                                <input type="text" class="form-control" placeholder=""
+                                                    aria-label="Username" aria-describedby="addon-wrapping">
+                                            </div>
+                                            <div class="col-6">
+                                                <label for="" class="ms-1 mb-1 label-modal">Tổng giá trị: </label>
+                                                <input type="number" class="form-control" placeholder=""
+                                                    aria-label="Username" aria-describedby="addon-wrapping">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- footer -->
+                                <div class="container my-2">
+                                    <div class="row" style="justify-content: flex-end;">
+                                        <div class="col-3 m-2 d-flex justify-content-end">
+                                            <button type="button" class="btn btn-success" style="font-size: small;">Lập hóa đơn</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mt-2">
+                    <div class="col-12">
+                        <table class="table">
+                            <thead style="background: #0e2238;">
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Mã hóa đơn</th>
+                                    <th scope="col">Người xuất hóa đơn</th>
+                                    <th scope="col">Tên mặt hàng</th>
+                                    <th scope="col">Số lượng</th>
+                                    <th scope="col">Giá</th>
+                                    <th scope="col">Tổng giá trị</th>
+                                    <th scope="col" class="text-center">Thời gian</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr></tr>
+                                    <th scope="row">1</th>
+                                    <td>HC01</td>
+                                    <td>Nguyễn Văn A</td>
+                                    <td>Ghế</td>
+                                    <td>5</td>
+                                    <td>200.000 VND</td>
+                                    <td>1.000.000 VND</td>
+                                    <td class="text-center">9/10/2024 - 12:14</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
