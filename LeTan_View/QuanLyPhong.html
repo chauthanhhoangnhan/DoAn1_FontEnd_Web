@@ -9,47 +9,8 @@
     <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <style>
-        /* Điều chỉnh modal để vừa đủ chứa nội dung */
-        .modal-dialog {
-            width: auto;
-            max-width: 100%;
-            margin: 30px auto;
-        }
-
-        /* Nội dung modal vẫn căn giữa theo chiều dọc */
-        .modal-content {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        /* Nội dung modal có thể cuộn nếu quá dài */
-        .modal-body {
-            flex-grow: 1;
-            padding: 15px;
-        }
-
-        /* Header và footer được căn chỉnh hợp lý */
-        .modal-header,
-        .modal-footer {
-            padding: 10px;
-        }
-
-        /* Áp dụng màu nền xanh lá cây nhạt cho các ô trong bảng */
-        .modal-body table {
-            width: 100%;
-        }
-
-        /* Các ô tiêu đề trong bảng */
-        .modal-body th {
-            background-color: #b2e0b2;
-            color: #333;
-            padding: 10px;
-            border: 1px solid #ddd;
-        }
-    </style>
 
 </head>
 
@@ -236,198 +197,286 @@
                 </div>
             </main>
         </div>
-    </div>
 
-    <!-- Add a modal dialog box -->
-    <!-- Modal cho nút nhận phòng -->
-    <div class="modal fade" id="roomModal" tabindex="-1" aria-labelledby="roomModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="roomModalLabel">Phòng nhận</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <!-- Modal cho nút nhận phòng xám -->
+<div class="modal fade" id="roomModal" tabindex="-1" aria-labelledby="roomModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content" style="border-radius: 20px">
+            <div class="modal-header d-flex justify-content-center">
+                <div>
+                    <h5 style="font-weight: bolder;">Thông tin đặt phòng </h5>
                 </div>
-                <div class="modal-body">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th style="width: 25%;">Hạng phòng</th>
-                                <th style="width: 25%;">Phòng</th>
-                                <th style="width: 25%;">Ngày nhận</th>
-                                <th style="width: 25%;"> Ngày trả</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Phòng 02 giường đơn</td>
-                                <td>
-                                    <select style="width: 100%; padding: 5px; border: 1px solid #ccc; border-radius: 4px;">
-                                        <option>P.501</option>
-                                    </select>
-                                </td>
-                                <td>
-                                    <div class="date-time" style="display: flex; align-items: center;">
-                                        <input type="datetime-local" value="2023-10-10T14:39"
-                                            style="width: 100%; padding: 5px; border: 1px solid #ccc; border-radius: 4px;">
-                                        <i class="fas fa-calendar-alt ms-2"></i>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 px-0">
+                            <div class="container">
+                                <div class="row mt-2">
+                                    <div class="col-4">
+                                        <h6><span style="font-weight: 600;">Họ tên:</span></h6>
+                                        <input type="text" class="form-control" value="Nguyễn Văn Nhật">
                                     </div>
-                                </td>
-                                <td>
-                                    <div class="date-time" style="display: flex; align-items: center;">
-                                        <input type="datetime-local" value="2023-11-09T23:59"
-                                            style="width: 100%; padding: 5px; border: 1px solid #ccc; border-radius: 4px;">
+                                    <div class="col-4">
+                                        <h6><span style="font-weight: 600;">Số điện thoại:</span></h6>
+                                        <input type="text" class="form-control" value="012345678">
                                     </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                                    <div class="col-4">
+                                        <h6><span style="font-weight: 600;">Giới tính:</span></h6>
+                                        <select class="form-control">
+                                            <option value="Nam" selected>Nam</option>
+                                            <option value="Nữ">Nữ</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row mt-2">
+                                    <div class="col-4">
+                                        <h6><span style="font-weight: 600;">CCCD:</span></h6>
+                                        <input type="text" class="form-control" value="091275632831">
+                                    </div>
+                                    <div class="col-4">
+                                        <h6><span style="font-weight: 600;">Ngày nhận:</span></h6>
+                                        <div class="input-group date">
+                                            <input type="text" class="form-control datepicker" value="25/09/2024">
+                                            <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <h6><span style="font-weight: 600;">Ngày Trả:</span></h6>
+                                        <div class="input-group date">
+                                            <input type="text" class="form-control datepicker" value="27/09/2024">
+                                            <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt-2">
+                                    <div class="col-4">
+                                        <h6><span style="font-weight: 600;">Email:</span></h6>
+                                        <input type="email" class="form-control" value="nhat029@gmail.com">
+                                    </div>
+                                    <div class="col-4">
+                                        <h6><span style="font-weight: 600;">Tổng số ngày:</span></h6>
+                                        <input type="text" class="form-control" value="2">
+                                    </div>
+                                    <div class="col-4">
+                                        <h6><span style="font-weight: 600;">Hạng phòng:</span></h6>
+                                        <input type="text" class="form-control" value="VIP">
+                                    </div>
+                                </div>
+                                <div class="row mt-2">
+                                    <div class="col-4">
+                                        <h6><span style="font-weight: 600;">Tên phòng:</span></h6>
+                                        <input type="text" class="form-control" value="PL001">
+                                    </div>
+                                    <div class="col-4">
+                                        <h6><span style="font-weight: 600;">Yêu cầu:</span></h6>
+                                        <input type="text" class="form-control" value="Sạch sẽ">
+                                    </div>
+                                    <div class="col-4">
+                                        <h6><span style="font-weight: 600;">Thanh toán:</span></h6>
+                                        <input type="text" class="form-control" value="900000 VND">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-success">Nhận phòng</button>
-                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success">Nhận phòng</button>
+                <button type="button" class="btn btn-warning">Đặt phòng</button>
             </div>
         </div>
     </div>
-
-    <!-- Modal cho nút xác nhận trả phòng -->
-    <div class="modal fade" id="checkoutModal" tabindex="-1" aria-labelledby="checkoutModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="checkoutModalLabel">Xác nhận trả phòng</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+ <!-- Modal cho nút nhận phòng màu vàng -->
+<div class="modal fade" id="yellowRoomModal" tabindex="-1" aria-labelledby="yellowRoomModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content" style="border-radius: 20px">
+            <div class="modal-header d-flex justify-content-center">
+                <div>
+                    <h5 style="font-weight: bolder;">Thông tin nhận phòng</h5>
                 </div>
-                <div class="modal-body">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th>Hạng phòng</th>
-                                <th>Phòng</th>
-                                <th>Nhận</th>
-                                <th>Trả</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Phòng 01 giường đôi cho 2 người</td>
-                                <td>P.202</td>
-                                <td>
-                                    <div class="date-time" style="display: flex; align-items: center;">
-                                        10 Thg10, 14:39
-                                        <i class="fas fa-calendar-alt ms-2"></i>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 px-0">
+                            <div class="container">
+                                <div class="row mt-2">
+                                    <div class="col-4">
+                                        <h6><span style="font-weight: 600;">Họ tên:</span></h6>
+                                        <input type="text" class="form-control" value="Nguyễn Văn Nhật">
                                     </div>
-                                </td>
-                                <td>
-                                    <div class="date-time" style="display: flex; align-items: center;">
-                                        <input type="datetime-local" value="2023-10-10T19:35"
-                                            style="width: 100%; padding: 5px; border: 1px solid #ccc; border-radius: 4px;">
-                                        <i class="fas fa-calendar-alt ms-2"></i>
+                                    <div class="col-4">
+                                        <h6><span style="font-weight: 600;">Số điện thoại:</span></h6>
+                                        <input type="text" class="form-control" value="012345678">
                                     </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                                    <div class="col-4">
+                                        <h6><span style="font-weight: 600;">Giới tính:</span></h6>
+                                        <select class="form-control">
+                                            <option value="Nam" selected>Nam</option>
+                                            <option value="Nữ">Nữ</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row mt-2">
+                                    <div class="col-4">
+                                        <h6><span style="font-weight: 600;">CCCD:</span></h6>
+                                        <input type="text" class="form-control" value="091275632831">
+                                    </div>
+                                    <div class="col-4">
+                                        <h6><span style="font-weight: 600;">Ngày nhận:</span></h6>
+                                        <div class="input-group date">
+                                            <input type="text" class="form-control datepicker" value="25/09/2024">
+                                            <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <h6><span style="font-weight: 600;">Ngày Trả:</span></h6>
+                                        <div class="input-group date">
+                                            <input type="text" class="form-control datepicker" value="27/09/2024">
+                                            <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt-2">
+                                    <div class="col-4">
+                                        <h6><span style="font-weight: 600;">Email:</span></h6>
+                                        <input type="email" class="form-control" value="nhat029@gmail.com">
+                                    </div>
+                                    <div class="col-4">
+                                        <h6><span style="font-weight: 600;">Tổng số ngày:</span></h6>
+                                        <input type="text" class="form-control" value="2">
+                                    </div>
+                                    <div class="col-4">
+                                        <h6><span style="font-weight: 600;">Hạng phòng:</span></h6>
+                                        <input type="text" class="form-control" value="VIP">
+                                    </div>
+                                </div>
+                                <div class="row mt-2">
+                                    <div class="col-4">
+                                        <h6><span style="font-weight: 600;">Tên phòng:</span></h6>
+                                        <input type="text" class="form-control" value="PL001">
+                                    </div>
+                                    <div class="col-4">
+                                        <h6><span style="font-weight: 600;">Yêu cầu:</span></h6>
+                                        <input type="text" class="form-control" value="Sạch sẽ">
+                                    </div>
+                                    <div class="col-4">
+                                        <h6><span style="font-weight: 600;">Thanh toán:</span></h6>
+                                        <input type="text" class="form-control" value="900000 VND">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-success">Trả phòng và thanh toán</button>
-                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-warning">Nhận phòng</button>
             </div>
         </div>
     </div>
+</div>
 
-    <!-- Modal cho nút nhận phòng màu vàng -->
-    <div class="modal fade" id="yellowRoomModal" tabindex="-1" aria-labelledby="yellowRoomModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="yellowRoomModalLabel">Đặt/Nhận phòng nhanh</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+<!-- Modal cho nút chọn phòng -->
+<!-- Modal cho nút chọn phòng -->
+<div class="modal fade" id="checkoutModal" tabindex="-1" aria-labelledby="checkoutModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content" style="border-radius: 20px">
+            <div class="modal-header d-flex justify-content-center">
+                <div>
+                    <h5 style="font-weight: bolder;">TRả phòng</h5>
                 </div>
-                <div class="modal-body">
-                    <div class="tabs">
-                        <div class="tab active">Hạng phòng</div>
-                        <div class="tab">Phòng</div>
-                        <div class="tab">Hình thức</div>
-                        <div class="tab">Nhận</div>
-                        <div class="tab">Trả phòng</div>
-                        <div class="tab">Dự kiến</div>
-                        <div class="tab">Thành tiền</div>
-                    </div>
-                    <div class="form-group">
-                        <label>Phòng 01 giường đôi cho 2 người</label>
-                        <select>
-                            <option>P.201</option>
-                        </select>
-                    </div>
-                    <div class="add-room">
-                        <i class="fas fa-plus-circle"></i>
-                        <span>Chọn thêm phòng</span>
-                    </div>
-                    <div class="form-group">
-                        <label>Nhận</label>
-                        <input type="text" value="10 Thg10, 15:23">
-                        <i class="fas fa-calendar-alt icon"></i>
-                    </div>
-                    <div class="form-group">
-                        <label>Trả phòng</label>
-                        <input type="text" value="10 Thg10, 16:23">
-                        <i class="fas fa-clock icon"></i>
-                    </div>
-                    <div class="summary">
-                        <div class="total">1 giờ</div>
-                        <div class="amount">180,000</div>
-                        <i class="fas fa-trash-alt icon"></i>
-                    </div>
-                    <div class="notes">
-                        <input type="text" placeholder="Nhập ghi chú...">
-                    </div>
-                    <div class="summary">
-                        <div class="total">Khách cần trả</div>
-                        <div class="amount">180,000</div>
-                    </div>
-                    <div class="summary">
-                        <div class="total">Khách thanh toán</div>
-                        <div class="amount">0</div>
-                        <i class="fas fa-credit-card icon"></i>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 px-0">
+                            <div class="container">
+                                <div class="row mt-2">
+                                    <div class="col-4">
+                                        <h6><span style="font-weight: 600;">Họ tên:</span></h6>
+                                        <input type="text" class="form-control" value="Nguyễn Văn Nhật" disabled>
+                                    </div>
+                                    <div class="col-4">
+                                        <h6><span style="font-weight: 600;">Số điện thoại:</span></h6>
+                                        <input type="text" class="form-control" value="012345678" disabled>
+                                    </div>
+                                    <div class="col-4">
+                                        <h6><span style="font-weight: 600;">Giới tính:</span></h6>
+                                        <select class="form-control" disabled>
+                                            <option value="Nam" selected>Nam</option>
+                                            <option value="Nữ">Nữ</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row mt-2">
+                                    <div class="col-4">
+                                        <h6><span style="font-weight: 600;">CCCD:</span></h6>
+                                        <input type="text" class="form-control" value="091275632831" disabled>
+                                    </div>
+                                    <div class="col-4">
+                                        <h6><span style="font-weight: 600;">Ngày nhận:</span></h6>
+                                        <div class="input-group date">
+                                            <input type="text" class="form-control datepicker" value="25/09/2024">
+                                            <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <h6><span style="font-weight: 600;">Ngày Trả:</span></h6>
+                                        <input type="text" class="form-control" value="27/09/2024" disabled>
+                                    </div>
+                                </div>
+                                <div class="row mt-2">
+                                    <div class="col-4">
+                                        <h6><span style="font-weight: 600;">Email:</span></h6>
+                                        <input type="email" class="form-control" value="nhat029@gmail.com" disabled>
+                                    </div>
+                                    <div class="col-4">
+                                        <h6><span style="font-weight: 600;">Tổng số ngày:</span></h6>
+                                        <input type="text" class="form-control" value="2" disabled>
+                                    </div>
+                                    <div class="col-4">
+                                        <h6><span style="font-weight: 600;">Hạng phòng:</span></h6>
+                                        <input type="text" class="form-control" value="VIP" disabled>
+                                    </div>
+                                </div>
+                                <div class="row mt-2">
+                                    <div class="col-4">
+                                        <h6><span style="font-weight: 600;">Tên phòng:</span></h6>
+                                        <input type="text" class="form-control" value="PL001" disabled>
+                                    </div>
+                                    <div class="col-4">
+                                        <h6><span style="font-weight: 600;">Yêu cầu:</span></h6>
+                                        <input type="text" class="form-control" value="Sạch sẽ" disabled>
+                                    </div>
+                                    <div class="col- 4">
+                                        <h6><span style="font-weight: 600;">Thanh toán:</span></h6>
+                                        <input type="text" class="form-control" value="900000 VND" disabled>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-success">Nhận phòng</button>
-                    <button type="button" class="btn btn-warning">Đặt trước</button>
-                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success">Trả phòng và Thanh Toán</button>
             </div>
         </div>
     </div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const checkoutModal = document.getElementById('checkoutModal');
-            const dateTimeInputs = checkoutModal.querySelectorAll('input[type="datetime-local"]');
-
-            dateTimeInputs.forEach(input => {
-                input.addEventListener('change', updateTimeDiff);
-            });
-
-            function updateTimeDiff() {
-                const checkInTime = new Date(dateTimeInputs[0].value);
-                const checkOutTime = new Date(dateTimeInputs[1].value);
-
-                if (checkInTime && checkOutTime) {
-                    const diffMs = checkOutTime - checkInTime;
-                    const diffHrs = Math.floor(diffMs / (1000 * 60 * 60));
-                    const diffMins = Math.floor((diffMs % (1000 * 60 * 60)) / (1000 * 60));
-
-                    console.log(`${diffHrs} giờ ${diffMins} phút`);
-                }
-            }
-
-            updateTimeDiff();
-        });
-    </script>
-
+</div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 
